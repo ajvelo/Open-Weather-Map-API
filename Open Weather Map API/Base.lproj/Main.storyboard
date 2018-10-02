@@ -1,7 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" systemVersion="17A277" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -9,16 +13,83 @@
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Open_Weather_Map_API" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" verticalCompressionResistancePriority="751" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Sb5-2R-nCD">
+                                <rect key="frame" x="230" y="28" width="113" height="30"/>
+                                <state key="normal" title="Press to Refresh">
+                                    <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="refreshBtnAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="c2U-NZ-FUq"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Monday" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Qa6-3R-v8Y">
+                                <rect key="frame" x="155" y="121" width="66" height="25"/>
+                                <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="18"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sunny" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bGk-AM-unr">
+                                <rect key="frame" x="144" y="441" width="87" height="44"/>
+                                <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="32"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="London" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ap5-Wp-v9d">
+                                <rect key="frame" x="140" y="74" width="96" height="39"/>
+                                <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="28"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="20 °C" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hLO-NZ-c7v">
+                                <rect key="frame" x="124" y="517" width="128" height="70"/>
+                                <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="51"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="749" image="01d" translatesAutoresizingMaskIntoConstraints="NO" id="LUN-YE-pZi">
+                                <rect key="frame" x="72" y="178" width="231" height="239"/>
+                            </imageView>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="hLO-NZ-c7v" firstAttribute="top" secondItem="bGk-AM-unr" secondAttribute="bottom" constant="32" id="0Ao-RC-EWg"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Sb5-2R-nCD" secondAttribute="trailing" constant="32" id="3OY-Ur-5UL"/>
+                            <constraint firstItem="Qa6-3R-v8Y" firstAttribute="top" secondItem="ap5-Wp-v9d" secondAttribute="bottom" constant="8" id="4ii-Xr-DKi"/>
+                            <constraint firstItem="Sb5-2R-nCD" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="20" symbolic="YES" id="80Q-sC-XXO"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="LUN-YE-pZi" secondAttribute="trailing" constant="72" id="9wr-xy-yAV"/>
+                            <constraint firstItem="ap5-Wp-v9d" firstAttribute="top" secondItem="Sb5-2R-nCD" secondAttribute="bottom" constant="16" id="DPn-rG-Vba"/>
+                            <constraint firstItem="Qa6-3R-v8Y" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="KVC-Lm-VdY"/>
+                            <constraint firstItem="Sb5-2R-nCD" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="8" id="Uo6-0Z-GLo"/>
+                            <constraint firstItem="LUN-YE-pZi" firstAttribute="top" secondItem="Qa6-3R-v8Y" secondAttribute="bottom" constant="32" id="WgK-bH-ozQ"/>
+                            <constraint firstItem="LUN-YE-pZi" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="cAq-jb-DDv"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="hLO-NZ-c7v" secondAttribute="bottom" constant="80" id="dhC-gQ-uMI"/>
+                            <constraint firstItem="hLO-NZ-c7v" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="eG5-6L-oik"/>
+                            <constraint firstItem="bGk-AM-unr" firstAttribute="top" secondItem="LUN-YE-pZi" secondAttribute="bottom" constant="24" id="eVe-k9-xxh"/>
+                            <constraint firstItem="LUN-YE-pZi" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="72" id="fee-kQ-QNr"/>
+                            <constraint firstItem="bGk-AM-unr" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="iLb-TH-adc"/>
+                            <constraint firstItem="ap5-Wp-v9d" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="tGd-4d-th6"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <connections>
+                        <outlet property="conditionImgView" destination="LUN-YE-pZi" id="1qA-9O-jyO"/>
+                        <outlet property="conditionLabel" destination="bGk-AM-unr" id="YFm-2k-qmu"/>
+                        <outlet property="dayLabel" destination="Qa6-3R-v8Y" id="mVW-JQ-Ocp"/>
+                        <outlet property="locationLabel" destination="ap5-Wp-v9d" id="hnG-om-2T1"/>
+                        <outlet property="temperatureLabel" destination="hLO-NZ-c7v" id="dKf-44-uVA"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="24.800000000000001" y="29.23538230884558"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="01d" width="512" height="512"/>
+    </resources>
 </document>
