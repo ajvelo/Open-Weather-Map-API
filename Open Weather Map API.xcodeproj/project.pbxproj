@@ -14,6 +14,9 @@
 		4EA0099C2163D7D3006FE698 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4EA0099B2163D7D3006FE698 /* Assets.xcassets */; };
 		4EA0099F2163D7D3006FE698 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4EA0099D2163D7D3006FE698 /* LaunchScreen.storyboard */; };
 		4EFF2B692163E909007A8874 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EFF2B682163E909007A8874 /* Constants.swift */; };
+		4EFF2B6B2163F162007A8874 /* Data.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EFF2B6A2163F162007A8874 /* Data.swift */; };
+		4EFF2B6D2163F5E1007A8874 /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EFF2B6C2163F5E1007A8874 /* Model.swift */; };
+		4EFF2B6F21640462007A8874 /* Utility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EFF2B6E21640462007A8874 /* Utility.swift */; };
 		A2BE3F3ED01D479D1C2E0392 /* Pods_Open_Weather_Map_API.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 164EA2C7486A78B55B1D9649 /* Pods_Open_Weather_Map_API.framework */; };
 /* End PBXBuildFile section */
 
@@ -29,6 +32,9 @@
 		4EA0099E2163D7D3006FE698 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		4EA009A02163D7D3006FE698 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4EFF2B682163E909007A8874 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		4EFF2B6A2163F162007A8874 /* Data.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Data.swift; sourceTree = "<group>"; };
+		4EFF2B6C2163F5E1007A8874 /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
+		4EFF2B6E21640462007A8874 /* Utility.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utility.swift; sourceTree = "<group>"; };
 		608CBD4BEE9DFFE923B6B07B /* Pods-Open Weather Map API.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Open Weather Map API.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Open Weather Map API/Pods-Open Weather Map API.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -76,7 +82,10 @@
 			children = (
 				4EA009912163D7CE006FE698 /* AppDelegate.swift */,
 				4EA009932163D7CE006FE698 /* ViewController.swift */,
+				4EFF2B6A2163F162007A8874 /* Data.swift */,
+				4EFF2B6C2163F5E1007A8874 /* Model.swift */,
 				4EFF2B682163E909007A8874 /* Constants.swift */,
+				4EFF2B6E21640462007A8874 /* Utility.swift */,
 				4EA009952163D7CE006FE698 /* Main.storyboard */,
 				4EA0099B2163D7D3006FE698 /* Assets.xcassets */,
 				4EA0099D2163D7D3006FE698 /* LaunchScreen.storyboard */,
@@ -208,8 +217,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4EFF2B6F21640462007A8874 /* Utility.swift in Sources */,
 				4EA009942163D7CE006FE698 /* ViewController.swift in Sources */,
+				4EFF2B6B2163F162007A8874 /* Data.swift in Sources */,
 				4EA0099A2163D7CE006FE698 /* Open_Weather_Map_API.xcdatamodeld in Sources */,
+				4EFF2B6D2163F5E1007A8874 /* Model.swift in Sources */,
 				4EA009922163D7CE006FE698 /* AppDelegate.swift in Sources */,
 				4EFF2B692163E909007A8874 /* Constants.swift in Sources */,
 			);
