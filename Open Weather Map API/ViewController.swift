@@ -7,8 +7,13 @@
 //
 
 import UIKit
+import Alamofire
+import SwiftyJSON
+import CoreLocation
 
 class ViewController: UIViewController {
+    
+    let apiKey = API_KEY
     
     @IBOutlet weak var locationLabel: UILabel!
     @IBOutlet weak var dayLabel: UILabel!

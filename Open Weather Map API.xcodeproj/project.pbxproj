@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4E31A8FF2163E31E00EA7B82 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E31A8FE2163E31E00EA7B82 /* Constants.swift */; };
 		4EA009922163D7CE006FE698 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EA009912163D7CE006FE698 /* AppDelegate.swift */; };
 		4EA009942163D7CE006FE698 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EA009932163D7CE006FE698 /* ViewController.swift */; };
 		4EA009972163D7CE006FE698 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4EA009952163D7CE006FE698 /* Main.storyboard */; };
@@ -18,6 +19,7 @@
 
 /* Begin PBXFileReference section */
 		164EA2C7486A78B55B1D9649 /* Pods_Open_Weather_Map_API.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Open_Weather_Map_API.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		4E31A8FE2163E31E00EA7B82 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		4E4EB08A2A715946A270FCD5 /* Pods-Open Weather Map API.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Open Weather Map API.release.xcconfig"; path = "Pods/Target Support Files/Pods-Open Weather Map API/Pods-Open Weather Map API.release.xcconfig"; sourceTree = "<group>"; };
 		4EA0098E2163D7CD006FE698 /* Open Weather Map API.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Open Weather Map API.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		4EA009912163D7CE006FE698 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -74,6 +76,7 @@
 			children = (
 				4EA009912163D7CE006FE698 /* AppDelegate.swift */,
 				4EA009932163D7CE006FE698 /* ViewController.swift */,
+				4E31A8FE2163E31E00EA7B82 /* Constants.swift */,
 				4EA009952163D7CE006FE698 /* Main.storyboard */,
 				4EA0099B2163D7D3006FE698 /* Assets.xcassets */,
 				4EA0099D2163D7D3006FE698 /* LaunchScreen.storyboard */,
@@ -165,16 +168,12 @@
 			buildActionMask = 2147483647;
 			files = (
 			);
-			inputFileListPaths = (
-			);
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-Open Weather Map API/Pods-Open Weather Map API-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
 				"${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-			);
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyJSON.framework",
@@ -189,15 +188,11 @@
 			buildActionMask = 2147483647;
 			files = (
 			);
-			inputFileListPaths = (
-			);
 			inputPaths = (
 				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
 				"${PODS_ROOT}/Manifest.lock",
 			);
 			name = "[CP] Check Pods Manifest.lock";
-			outputFileListPaths = (
-			);
 			outputPaths = (
 				"$(DERIVED_FILE_DIR)/Pods-Open Weather Map API-checkManifestLockResult.txt",
 			);
@@ -216,6 +211,7 @@
 				4EA009942163D7CE006FE698 /* ViewController.swift in Sources */,
 				4EA0099A2163D7CE006FE698 /* Open_Weather_Map_API.xcdatamodeld in Sources */,
 				4EA009922163D7CE006FE698 /* AppDelegate.swift in Sources */,
+				4E31A8FF2163E31E00EA7B82 /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
