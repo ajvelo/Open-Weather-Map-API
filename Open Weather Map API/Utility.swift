@@ -13,6 +13,7 @@ class Utility: NSObject {
     
     static func isConnected() -> Bool {
         
+        // Using SCNetworkReachability to check for reachability
         var zeroAddress = sockaddr_in()
         zeroAddress.sin_len = UInt8(MemoryLayout<sockaddr_in>.size)
         zeroAddress.sin_family = sa_family_t(AF_INET)

@@ -78,8 +78,10 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
         }
     }
     
+    // MARK: Load from Core Data
     func loadData() {
         
+        // If user is not connected to the internet, then load from CoreData
         let load = coreData.loadData()
         
         self.locationLabel.text = load.location
@@ -92,14 +94,27 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
         self.dayLabel.text = dateFormatter.string(from: load.date)
     }
     
+    // MARK: LocationManager Delegate
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
         
         let location = locations[0]
         let lat = location.coordinate.latitude
         let long = location.coordinate.longitude
         
-        Alamofire.request("http://api.openweathermap.org/data/2.5/weather?lat=\(lat)&lon=\(long)&appid=\(apiKey)&units=metric").responseJSON { (response) in
+        sendRequest(lat: lat, long: long)
+        
+        locationManager.stopUpdatingLocation()
+    }
+    
+    func locationManager(_ manager: CLLocationManager, didFailWithError error: Error) {
+        print(error.localizedDescription)
+    }
 
+    // MARK: Alamofire Request
+    func sendRequest(lat: CLLocationDegrees, long: CLLocationDegrees) {
+        
+        Alamofire.request("http://api.openweathermap.org/data/2.5/weather?lat=\(lat)&lon=\(long)&appid=\(apiKey)&units=metric").responseJSON { (response) in
+            
             self.spinner.stopAnimating()
             self.spinner.removeFromSuperview()
             
@@ -107,11 +122,13 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
                 let jsonResponse = JSON(responseStr)
                 let jsonWeather = jsonResponse["weather"].array![0]
                 let jsonTemp = jsonResponse["main"]
+                let jsonWind = jsonResponse["wind"]
+                let windSpeed = jsonWind["speed"].stringValue
                 let iconName = jsonWeather["icon"].stringValue
                 
                 self.locationLabel.text = jsonResponse["name"].stringValue
                 self.conditionImgView.image = UIImage(named: iconName)
-                self.conditionLabel.text = jsonWeather["main"].stringValue
+                self.conditionLabel.text = jsonWeather["main"].stringValue + "\nWindspeed of: \(windSpeed) m/s"
                 self.temperatureLabel.text = String(Int(round(jsonTemp["temp"].doubleValue))) + " °C"
                 
                 let date = Date()
@@ -121,25 +138,13 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
                 
                 let data = Model(location: jsonResponse["name"].stringValue,
                                  conditionImageView: jsonWeather["icon"].stringValue,
-                                 conditionLabel: jsonWeather["main"].stringValue,
+                                 conditionLabel: self.conditionLabel.text!, // Save UILabel text here as it has windspeed attached.
                                  temperatureLabel: String(Int(round(jsonTemp["temp"].doubleValue))) + " °C",
                                  date: date)
                 
                 self.coreData.saveData(model: data)
             }
-
         }
-        
-        locationManager.stopUpdatingLocation()
-    }
-    
-    func locationManager(_ manager: CLLocationManager, didFailWithError error: Error) {
-        print(error.localizedDescription)
-    }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
     }
 }
 

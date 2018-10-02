@@ -33,9 +33,9 @@
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bGk-AM-unr">
-                                <rect key="frame" x="187.5" y="555" width="0.0" height="0.0"/>
-                                <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="32"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bGk-AM-unr">
+                                <rect key="frame" x="188" y="587" width="0.0" height="0.0"/>
+                                <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="30"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -46,13 +46,13 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hLO-NZ-c7v">
-                                <rect key="frame" x="188" y="587" width="0.0" height="0.0"/>
+                                <rect key="frame" x="188" y="619" width="0.0" height="0.0"/>
                                 <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="51"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="749" translatesAutoresizingMaskIntoConstraints="NO" id="LUN-YE-pZi">
-                                <rect key="frame" x="72" y="114" width="231" height="417"/>
+                                <rect key="frame" x="72" y="114" width="231" height="449"/>
                             </imageView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -67,7 +67,7 @@
                             <constraint firstItem="Sb5-2R-nCD" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="8" id="Uo6-0Z-GLo"/>
                             <constraint firstItem="LUN-YE-pZi" firstAttribute="top" secondItem="Qa6-3R-v8Y" secondAttribute="bottom" constant="32" id="WgK-bH-ozQ"/>
                             <constraint firstItem="LUN-YE-pZi" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="cAq-jb-DDv"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="hLO-NZ-c7v" secondAttribute="bottom" constant="80" id="dhC-gQ-uMI"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="hLO-NZ-c7v" secondAttribute="bottom" constant="48" id="dhC-gQ-uMI"/>
                             <constraint firstItem="hLO-NZ-c7v" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="eG5-6L-oik"/>
                             <constraint firstItem="bGk-AM-unr" firstAttribute="top" secondItem="LUN-YE-pZi" secondAttribute="bottom" constant="24" id="eVe-k9-xxh"/>
                             <constraint firstItem="LUN-YE-pZi" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="72" id="fee-kQ-QNr"/>
