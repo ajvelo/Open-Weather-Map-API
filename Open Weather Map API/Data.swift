@@ -67,6 +67,7 @@ class CoreData {
         
         for object in resultData {
             let thenDate = object.value(forKey: "date") as! Date
+            // Delete data more than 24 hours old.
             if thenDate.addingTimeInterval(86400) < nowDate {
                 managedContext.delete(object)
             }
