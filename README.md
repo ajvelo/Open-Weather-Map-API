@@ -34,4 +34,4 @@ Sending the request in the location manager delegate means it's called multiple 
 
 Alamofire and SwifyJSON were used for sending the request and treating the response respectfully.
 
-Images where taken from ![here](https://mega.nz/#!0MlkDIKI!C4eZpyfhKUP3399N1ZKBuPPmfBdXmpvorymQXC6dOUg)
+Images where taken from [here](https://mega.nz/#!0MlkDIKI!C4eZpyfhKUP3399N1ZKBuPPmfBdXmpvorymQXC6dOUg)
