@@ -31,3 +31,7 @@ The view was simple and relatively straightforward. If a more complex view was n
 For larger applications requires more API calls, better file seperation would be needed, since the request does not need to sit in the ViewController and instead could have it's own layer.
 
 Sending the request in the location manager delegate means it's called multiple times, although when loading from cache, only the first is retrieved. If concerned about the number of API requests or a limit is imposed it would be better to have the call function placed somewhere where it is only called once, maybe using a Bool.
+
+Alamofire and SwifyJSON were used for sending the request and treating the response respectfully.
+
+Images where taken from ![here](https://mega.nz/#!0MlkDIKI!C4eZpyfhKUP3399N1ZKBuPPmfBdXmpvorymQXC6dOUg)
