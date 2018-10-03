@@ -73,6 +73,7 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
             }
             
             else {
+                // Let user know their location could not be found
                 locationLabel.text = "Could not get location"
                 loadData()
             }
@@ -151,7 +152,7 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
             }
             
             else {
-                // Do this is request/resposne fails
+                // Do this is request/response fails
                 self.locationLabel.text = "Could not get weather data"
                 self.loadData()
             }
