@@ -71,6 +71,11 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
                 locationManager.desiredAccuracy = kCLLocationAccuracyBest
                 locationManager.startUpdatingLocation()
             }
+            
+            else {
+                locationLabel.text = "Could not get location"
+                loadData()
+            }
         }
         else {
             locationLabel.text = "No Internet Connection"
@@ -143,6 +148,11 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
                                  date: date)
                 
                 self.coreData.saveData(model: data)
+            }
+            
+            else {
+                self.locationLabel.text = "Could not get weather data"
+                self.loadData()
             }
         }
     }
